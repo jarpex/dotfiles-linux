@@ -1,0 +1,49 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d  WWW        
+
+bspc config border_width            1
+bspc config window_gap              0
+
+# Single Window Settings
+bspc config gapless_monocle         true
+bspc config borderless_monocle      false
+bspc config single_monocle 	true
+
+bspc config split_ratio             0.5
+bspc config focus_follows_pointer   true
+
+#Colors
+bspc config normal_border_color     "#44475a"
+bspc config active_border_color     "#bd93f9"
+bspc config focused_border_color    "#ff79c6"
+bspc config presel_feedback_color   "#6272a4"
+
+# Mouse Settings
+bspc config pointer_modifier	    super
+bspc config pointer_action1	        move
+bspc config pointer_action2	        resize_side
+bspc config pointer_action3	        resize_corner
+
+#Apps rules
+bspc rule -a Firefox desktop='^2' follow=on
+bspc rule -a Chromium desktop='^2' follow=on
+bspc rule -a "Tauon Music Box" desktop='^10' 
+bspc rule -a Screenkey manage=off
+bspc rule -a Anki state=floating
+bspc rule -a Qalculate-gtk state=floating rectangle=800x600+880+420
+bspc rule -a Lxtask state=floating rectangle=800x600+880+420
+bspc rule -a Lxappearance state=floating rectangle=800x600+880+420
+bspc rule -a Nitrogen state=floating rectangle=800x600+880+420
+bspc rule -a Cherrytree state=fullscreen
+bspc rule -a Simplenote state=floating rectangle=1000x600+780+420
+bspc rule -a TelegramDesktop desktop='^9'
+
+#Startup
+numlockx on & #Turn ON NumLock
+xsetroot -cursor_name left_ptr & #Change default cursor
+wmname LG3D #Fix for JAVA GUI apps
+xset s off && xset dpms 0 0 0 #Disable DPMS
+redshift -l 55.7558:37.6173 -t 6500:2500 & #Sets yellowish screen 
