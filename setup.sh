@@ -10,12 +10,12 @@ sudo cp etc/sudoers /etc/sudoers
 sudo sed -i "s/-j2/-j$(nproc)/;s/^#MAKEFLAGS/MAKEFLAGS/" /etc/makepkg.conf
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
-makepkg -si
+makepkg --syncdeps --install --needed --noconfirm.
 cd ..
 yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
 git clone https://github.com/jarpex/ttf-ios-emoji
 cd ttf-ios-emoji
-makepkg -si
+makepkg --syncdeps --install --needed --noconfirm.
 cd ..
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 mkdir ~/.config/bspwm
@@ -92,16 +92,16 @@ case $CHOICE in
                         ;;
                     3)
                         echo "xrandr --output Virtual1 --mode 1600x900" >> ~/.config/bspwm/bspwmrc
-                        ::
+                        ;;
                     4)
                         echo "xrandr --output Virtual1 --mode 1920x1080" >> ~/.config/bspwm/bspwmrc
-                        ::
+                        ;;
                     5)
                         echo "xrandr --output Virtual1 --mode 2560x1440" >> ~/.config/bspwm/bspwmrc
-                        ::
+                        ;;
                     6)
                         echo "xrandr --output Virtual1 --mode 3840x2160" >> ~/.config/bspwm/bspwmrc
-                        ::
+                        ;;
             esac
             ;;
         5)
