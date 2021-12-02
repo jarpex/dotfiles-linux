@@ -162,7 +162,7 @@ case $CHOICE in
             ;;
 esac
 echo "Disabling PC-speaker"
-rmmod pcspkr
+sudo rmmod pcspkr
 sudo echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
 # Tap to click
