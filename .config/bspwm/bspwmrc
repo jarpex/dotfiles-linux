@@ -45,5 +45,3 @@ bspc rule -a TelegramDesktop desktop='^9'
 numlockx on & #Turn ON NumLock
 xsetroot -cursor_name left_ptr & #Change default cursor
 wmname LG3D #Fix for JAVA GUI apps
-xset s off && xset dpms 0 0 0 #Disable DPMS
-redshift -l 55.7558:37.6173 -t 6500:2500 & #Sets yellowish screen 
