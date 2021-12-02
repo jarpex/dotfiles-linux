@@ -12,7 +12,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg --syncdeps --install --needed --noconfirm.
 cd ..
-yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
+yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler pulseaudio qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
 git clone https://github.com/jarpex/ttf-ios-emoji
 cd ttf-ios-emoji
 makepkg --syncdeps --install --needed --noconfirm.
@@ -50,19 +50,19 @@ clear
 case $CHOICE in
         1)
             echo "You chose AMD"
-            yay --noconfirm --needed -Sy mesa xf86-video-amdgpu
+            yay --noconfirm --needed -S mesa xf86-video-amdgpu
             ;;
         2)
             echo "You chose NVIDIA"
-            yay --noconfirm --needed -Sy nvidia nvidia-utils
+            yay --noconfirm --needed -S nvidia nvidia-utils
             ;;
         3)
             echo "You chose INTEL"
-            yay --noconfirm --needed -Sy mesa xf86-video-intel
+            yay --noconfirm --needed -S mesa xf86-video-intel
             ;;
         4)
             echo "You chose VMWARE"
-            yay --noconfirm --needed -Sy mesa open-vm-tools xf86-video-vmware
+            yay --noconfirm --needed -S mesa open-vm-tools xf86-video-vmware
             BACKTITLE="Screen Resolution"
             TITLE="Select screen resolution"
             MENU="Choose one of the following options:"
@@ -131,7 +131,7 @@ case $CHOICE in
             ;;
         2)
             echo "You chose Full"
-            yay --noconfirm --needed -Sy redshift neofetch
+            yay --noconfirm --needed -S redshift neofetch
             echo "redshift -l 55.7558:37.6173 -t 6500:2500 & #Sets yellowish screen" >> ~/.config/bspwm/bspwmrc
             ;;
 esac
@@ -163,7 +163,7 @@ case $CHOICE in
 esac
 echo "Disabling PC-speaker"
 sudo rmmod pcspkr
-sudo echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 
 # Tap to click
 [ ! -f /etc/X11/xorg.conf.d/40-libinput.conf ] && printf 'Section "InputClass"
@@ -173,7 +173,7 @@ sudo echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
         Driver "libinput"
 	# Enable left mouse button by tapping
 	Option "Tapping" "on"
-EndSection' > /etc/X11/xorg.conf.d/40-libinput.conf
+EndSection' | sudo tee /etc/X11/xorg.conf.d/40-libinput.conf
 
 # Fix fluidsynth/pulseaudio issue.
 grep -q "OTHER_OPTS='-a pulseaudio -m alsa_seq -r 48000'" /etc/conf.d/fluidsynth ||
