@@ -12,7 +12,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg --syncdeps --install --needed --noconfirm.
 cd ..
-yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler pulseaudio qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
+yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fluidsynth fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
 git clone https://github.com/jarpex/ttf-ios-emoji
 cd ttf-ios-emoji
 makepkg --syncdeps --install --needed --noconfirm.
