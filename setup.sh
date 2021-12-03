@@ -23,6 +23,12 @@ cp .config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/bspwm/bspwmrc
 mkdir ~/.config/sxhkd
 cp .config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
+mkdir ~/.config/polybar
+cp .config/polybar/config ~/.config/polybar/config
+cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/launch.sh
+mkdir ~/.config/alacritty
+cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp home/.xinitrc ~/.xinitrc
 
 HEIGHT=15
