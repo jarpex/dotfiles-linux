@@ -46,3 +46,4 @@ numlockx on & #Turn ON NumLock
 xsetroot -cursor_name left_ptr & #Change default cursor
 wmname LG3D #Fix for JAVA GUI apps
 sh ~/.config/polybar/launch.sh
+amixer sset PCM 100

@@ -4,9 +4,11 @@ sudo pacman-key --populate archlinux
 sudo rm /etc/pacman.conf
 sudo rm /etc/makepkg.conf
 sudo rm /etc/sudoers.conf
+sudo rm /etc/locale.conf
 sudo cp etc/pacman.conf /etc/pacman.conf
 sudo cp etc/makepkg.conf /etc/makepkg.conf
 sudo cp etc/sudoers /etc/sudoers
+sudo cp etc/locale.conf /etc/locale.conf
 sudo sed -i "s/-j2/-j$(nproc)/;s/^#MAKEFLAGS/MAKEFLAGS/" /etc/makepkg.conf
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
