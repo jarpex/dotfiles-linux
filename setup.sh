@@ -14,7 +14,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg --syncdeps --install --needed --noconfirm
 cd ..
-yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit zathura zathura-pdf-mupdf zsh zsh-fast-syntax-highlighting-git
+yay --noconfirm --needed -Sy alacritty arandr bspwm chromium clpimg dash dialog dmenu dosfstools dunst escrotum-git exfat-utils fzf man-db mediainfo mpv neovim numlockx python python-pip pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit xorg-xinput zathura zathura-pdf-mupdf zip zsh zsh-fast-syntax-highlighting-git
 git clone https://github.com/jarpex/ttf-ios-emoji
 cd ttf-ios-emoji
 makepkg --syncdeps --install --needed --noconfirm
@@ -29,6 +29,8 @@ mkdir ~/.config/polybar
 cp .config/polybar/config ~/.config/polybar/config
 cp .config/polybar/launch.sh ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/launch.sh
+cp .config/chromium-flags.conf ~/.config/chromium-flags.conf
+cp -R .config/chromium ~/.config/chromium
 mkdir ~/.config/alacritty
 cp .config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 cp home/.xinitrc ~/.xinitrc
@@ -139,7 +141,7 @@ case $CHOICE in
             ;;
         2)
             echo "You chose Full"
-            yay --noconfirm --needed -S redshift neofetch
+            yay --noconfirm --needed -S redshift neofetch code-features simplenote-electron-bin
             echo "redshift -l 55.7558:37.6173 -t 6500:2500 & #Sets yellowish screen" >> ~/.config/bspwm/bspwmrc
             ;;
 esac

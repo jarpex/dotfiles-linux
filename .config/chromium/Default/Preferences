@@ -1,0 +1,77 @@
+{
+    "homepage":"http://new_tab_page",
+    "homepage_is_newtabpage": true,
+    "extensions": {
+        "settings": {
+          "cjpalhdlnbpafiamejdnhcphjbkeiagm": {
+              "location": 1,
+              "manifest": {
+                "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "js/vapi-client.js", "js/contentscript.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+                  } ],
+                "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmJNzUNVjS6Q1qe0NRqpmfX/oSJdgauSZNdfeb5RV1Hji21vX0TivpP5gq0fadwmvmVCtUpOaNUopgejiUFm/iKHPs0o3x7hyKk/eX0t2QT3OZGdXkPiYpTEC0f0p86SQaLoA2eHaOG4uCGi7sxLJmAXc6IsxGKVklh7cCoLUgWEMnj8ZNG2Y8UKG3gBdrpES5hk7QyFDMraO79NmSlWRNgoJHX6XRoY66oYThFQad8KL8q3pf3Oe8uBLKywohU0ZrDPViWHIszXoE9HEvPTFAbHZ1umINni4W/YVs+fhqHtzRJcaKJtsTaYy+cholu5mAYeTZqtHf6bcwJ8t9i2afwIDAQAB",
+                "name": "uBlock Origin",
+                "permissions": [ "contextMenus", "privacy", "storage", "tabs", "unlimitedStorage", "webNavigation", "webRequest", "webRequestBlocking", "<all_urls>" ],
+                "update_url": "https://clients2.google.com/service/update2/crx",
+                "version": "0.0",
+                "manifest_version": 2
+              },
+              "path": "cjpalhdlnbpafiamejdnhcphjbkeiagm\\0.0",
+              "state": 1
+          },
+          "gfapcejdoghpoidkfodoiiffaaibpaem": {
+              "location": 1,
+              "manifest": {
+                "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "js/vapi-client.js", "js/contentscript.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+                  } ],
+                "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhZy7jiB4UtlGGkruTKYZXvNfTV4TX1mMoiRPZgCYmkAJ8+AhRSyl47HsC8PTs8fivVYIP0STOxmnq+DhDQ/uubM2oDeHj7jjJBxxx5buQjRX2NOSTlWD7RshsetlKlv6Nl057BWgtg2Oe1j2YS72aOfgMDB+5e4jCebTQE5qQIXyjtS5pXUW+OAUqQgNtg7aYXK98l2jNwCU/RJk9HWAh25Vi3KA1WLakCbMiS0H4+zpHfsK5Ktylw2yyEJrOXZBFSO2wusKhOoViQCvjBCkrW2PLQWcw3aWeP8bfsAK6FVrbWG9pAlzvPca5vXo3jFcItfsK6uIOVqUkNTfcA0SxQIDAQAB",
+                "name": "Dracula Chrome Theme - Dark and Minimal",
+                "update_url": "https://clients2.google.com/service/update2/crx",
+                "version": "0.0",
+                "manifest_version": 2
+              },
+              "path": "gfapcejdoghpoidkfodoiiffaaibpaem\\0.0",
+              "state": 1
+          }
+        }
+    },
+    "browser": {
+      "show_home_button": true
+    },
+    "bookmark_bar": {
+      "show_on_all_tabs": false,
+      "show_apps_shortcut":false
+    },
+    "sync_promo": {
+      "show_on_first_run_allowed": false
+    },
+    "distribution": {
+      "import_bookmarks_from_file": "bookmarks.html",
+      "import_bookmarks": true,
+      "import_history": true,
+      "import_home_page": true,
+      "import_search_engine": true,
+      "ping_delay": 60,
+      "do_not_create_desktop_shortcut": true,
+      "do_not_create_quick_launch_shortcut": true,
+      "do_not_create_taskbar_shortcut": true,
+      "do_not_launch_chrome": true,
+      "do_not_register_for_update_launch": true,
+      "make_chrome_default": true,
+      "make_chrome_default_for_user": true,
+      "system_level": true,
+      "verbose_logging": true
+    },
+    "first_run_tabs": [
+      "http://www.example.com",
+      "http://welcome_page",
+      "http://new_tab_page"
+    ]
+}
