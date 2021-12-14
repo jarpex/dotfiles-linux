@@ -10,7 +10,7 @@ bspc config window_gap              0
 # Single Window Settings
 bspc config gapless_monocle         true
 bspc config borderless_monocle      true
-bspc config single_monocle 	        true
+bspc config single_monocle 	    true
 
 bspc config split_ratio             0.5
 bspc config focus_follows_pointer   true
@@ -47,3 +47,4 @@ xsetroot -cursor_name left_ptr & #Change default cursor
 wmname LG3D #Fix for JAVA GUI apps
 sh ~/.config/polybar/launch.sh
 amixer sset PCM 100
+redshift -l 55.7558:37.6173 -t 6500:2500 & #Sets yellowish screen
