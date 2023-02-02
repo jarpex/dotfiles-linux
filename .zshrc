@@ -5,7 +5,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' matcher-list ''
 zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle :compinstall filename '/home/jarpex/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 bindkey  "^[[H"   beginning-of-line
