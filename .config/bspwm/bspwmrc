@@ -33,13 +33,16 @@ bspc rule -a Chromium desktop='^2' follow=on
 bspc rule -a "Tauon Music Box" desktop='^10' 
 bspc rule -a Screenkey manage=off
 bspc rule -a Anki state=floating
-bspc rule -a Qalculate-gtk state=floating rectangle=800x600+880+420
-bspc rule -a Lxtask state=floating rectangle=800x600+880+420
-bspc rule -a Lxappearance state=floating rectangle=800x600+880+420
-bspc rule -a Nitrogen state=floating rectangle=800x600+880+420
+bspc rule -a Qalculate-gtk state=floating rectangle=800x600+560+240
+bspc rule -a Lxtask state=floating rectangle=800x600+560+240
+bspc rule -a Lxappearance state=floating rectangle=800x600+560+240
+bspc rule -a Nitrogen state=floating rectangle=800x600+560+240
 bspc rule -a Cherrytree state=fullscreen
-bspc rule -a Simplenote state=floating rectangle=1000x600+780+420
+bspc rule -a Simplenote state=floating rectangle=1000x600+460+240
 bspc rule -a TelegramDesktop desktop='^9'
+bspc rule -a Blanket desktop='^10'
+bspc rule -a Zathura state=fullscreen
+bspc rule -a mpv state=fullscreen
 
 #Startup
 numlockx on & #Turn ON NumLock
