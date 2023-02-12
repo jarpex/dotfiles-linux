@@ -17,7 +17,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg --syncdeps --install --needed --noconfirm
 cd ..
-yay --noconfirm --needed -Sy alacritty arandr bspwm chromium xclip dash dialog dmenu dosfstools dunst exa-git exfat-utils fzf gsimplecal man-db mediainfo mpv noto-fonts-cjk neovim nerd-fonts-inconsolata numlockx python pipewire pipewire-pulse playerctl polybar poppler qimgv scrot simple-mtpfs sshfs sxhkd thunar ttf-font-awesome ttf-jetbrains-mono unrar unzip wmname xorg-apps xorg-server xorg-xdm xorg-xinit xorg-xinput zathura zathura-pdf-mupdf zip zsh zsh-fast-syntax-highlighting-git gnome-keyring libsecret qalculate-gtk
+yay --noconfirm --needed -Sy alacritty arandr bspwm chromium xclip dash dialog dmenu dosfstools dunst exa-git exfat-utils ffmpeg ffmpegthumbnailer fzf gnome-keyring gvfs gvfs-mpt gvfs-smb gsimplecal inetutils libgsf libsecret man-db mediainfo mpv noto-fonts-cjk neovim nerd-fonts-inconsolata numlockx python pipewire pipewire-pulse playerctl polybar poppler qalculate-gtk qimgv scrot simple-mtpfs sshfs sxhkd thunar tumbler ttf-font-awesome ttf-jetbrains-mono unrar unzip whois wmname xfce4-goodies xorg-apps xorg-server xorg-xdm xorg-xinit xorg-xinput zathura zathura-pdf-mupdf zip zsh zsh-fast-syntax-highlighting-git
 python -m ensurepip
 ~/.local/bin/pip3 install more-itertools
 yay -S escrotum
