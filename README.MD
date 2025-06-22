@@ -1,1 +1,1 @@
-![Image](https://github.com/jarpex/dotfiles/raw/master/image.png)
+![Image](https://github.com/jarpex/dotfiles-linux/raw/master/image.png)
